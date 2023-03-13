@@ -1,30 +1,21 @@
-$(document).ready(function() {
-    $("#registerForm").submit(function(event) {
-        event.preventDefault(); // prevent the form from submitting
+$(document).ready(function(){
+    $("#registerForm").submit(function(event){
+        event.preventDefault(); // prevent default form submission
+        var formData = $(this).serialize(); // serialize form data
+        $.ajax({
+            url: "register.php", // php script to handle form data
+            type: "post",
+            data: formData,
+            success: function(response){
+                if(response == "success"){
 
-        var username = $("#username").val();
-        var email = $("#email").val();
-        var password = $("#password").val();
-
-        // Check if username field is empty
-        if (username === "") {
-            $("#usernameError").text("Please enter a username");
-        } else {
-            $("#usernameError").text("");
-        }
-
-        // Check if email field is empty
-        if (email === "") {
-            $("#emailError").text("Please enter an email address");
-        } else {
-            $("#emailError").text("");
-        }
-
-        // Check if password field is empty
-        if (password === "") {
-            $("#passwordError").text("Please enter a password");
-        } else {
-            $("#passwordError").text("");
-        }
+                    alert("Registration successful!");
+                    window.location.href = "login.html"; // redirect to profile page
+                }
+                else{
+                    alert("Registration failed. Please try again.");
+                }
+            }
+        });
     });
 });
