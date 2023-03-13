@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="profile.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />
+	<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+	<div class="container">
+		<h2>Profile</h2>
+		<form id="profileForm">
+			<div class="form-group">
+				<label for="age">Age:</label>
+				<input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
+			</div>
+			<div class="form-group">
+				<label for="dob">Date of Birth:</label>
+				<input type="text" class="form-control" id="dob" placeholder="Enter date of birth" name="dob">
+			</div>
+			<div class="form-group">
+				<label for="contact">Contact:</label>
+				<input type="text" class="form-control" id="contact" placeholder="Enter contact" name="contact">
+			</div>
+			<input type="hidden" id="user_id" name="user_id" value="<?php echo $_GET['user_id']; ?>">
+			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="button" class="btn btn-secondary" id="modifyButton">Modify</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Set background color to black */
+body {
+  background-color: #000;
+}
+
+/* Set text color to white */
+body, h1, h2, h3, h4, h5, h6, p, a, span {
+  color: #fff;
+}
+
+/* Set link color to a brighter shade of white */
+a {
+  color: #eee;
+}
+
+/* Set hover color for links */
+a:hover {
+  color: #fff;
+}
+
+/* Set border color to a lighter shade of white */
+input, textarea {
+  border-color: #ddd;
+}
+
+/* Set background color for inputs and textareas */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Set focus style for inputs and textareas */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 3px 2px #aaa;
+}
+
+/* Set color for submit button */
+input[type="submit"] {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Set hover color for submit button */
+input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+}
